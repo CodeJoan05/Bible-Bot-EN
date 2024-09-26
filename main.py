@@ -1,6 +1,6 @@
 import discord, json, re, sqlite3, os
+import webserver
 from discord.ext import commands
-from dotenv import load_dotenv
 
 # Import commands
 
@@ -15,7 +15,7 @@ from commands.removeuserdata import removeuserdata
 from commands.random import random
 from commands.settimezone import settimezone
 
-load_dotenv()
+DISCORD_TOKEN = os.environ['discordkey']
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -209,4 +209,5 @@ async def process_message_with_translation(message, translation):
                 title="Search error", description="The verse(s) given does not exist or the Bible translation does not contain the Old or New Testament", color=0xff1d15)
             await message.channel.send(embed=embed)
 
-client.run(os.environ['TOKEN'])
+webserver.keep_alive()
+client.run(DISCORD_TOKEN)
