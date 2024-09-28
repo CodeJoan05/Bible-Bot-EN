@@ -1,4 +1,4 @@
-import flask from Flask
+import Flask
 from threading import Thread
 
 app = Flask(__name__)
