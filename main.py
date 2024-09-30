@@ -14,6 +14,7 @@ from commands.search import search
 from commands.removeuserdata import removeuserdata
 from commands.random import random
 from commands.settimezone import settimezone
+from commands.dailyverse import dailyverse 
 
 DISCORD_TOKEN = os.environ['discordkey']
 
@@ -33,6 +34,7 @@ client.tree.add_command(search)
 client.tree.add_command(removeuserdata)
 client.tree.add_command(random)
 client.tree.add_command(settimezone)
+client.tree.add_command(dailyverse)
 
 # Create a SQLite database
 
