@@ -24,6 +24,8 @@ The bot has **122** Bible translations in **50** languages
 
 `/random [hour]` - displays random verse(s) from the Bible (1 to 10 verses)
 
+`/dailyverse [book] [chapter] [start_verse] [end_verse] [hour]` - displays the verse(s) of the day from the Bible
+
 `/removeuserdata` - deletes user data in the database
 
 ## **Website:** 
